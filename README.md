@@ -9,8 +9,8 @@
 ### Côté WSL
 ```{bash}
 URL_REPO="git@github.com:pietrodito/WSL-RStudio-server-pak-ready.git"
-DOCKER_DIR="~/Comp/docker/"
-RSTUDIO_USER_FILES="~/Comp/rstudio/"
+DOCKER_DIR="$HOME/Comp/docker/"
+RSTUDIO_USER_FILES="$HOME/Comp/rstudio/"
 
 
 mkdir -p "$DOCKER_DIR" "$RSTUDIO_USER_FILES"
