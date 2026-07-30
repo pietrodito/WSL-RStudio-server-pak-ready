@@ -4,7 +4,7 @@ services:
     ports:
       - "8787:8787"
     volumes:
-      - ~/Comp/rstudio:/home/rstudio/projects/
+      - ~/Comp/rstudio:/home/rstudio/
     environment:
       - USERID=${LOCAL_UID:-1000}
       - GROUPID=${LOCAL_GID:-1000}

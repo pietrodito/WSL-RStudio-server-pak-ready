@@ -9,4 +9,4 @@ RUN sed -i 's|http://archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu
 RUN echo "rstudio ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-rstudio \
     && chmod 0440 /etc/sudoers.d/90-rstudio
 
-RUN mkdir -p /home/rstudio/projects
+RUN R -e "install.packages('pak')""
