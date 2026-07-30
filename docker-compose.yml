@@ -1,0 +1,11 @@
+services:
+  rstudio:
+    build: .
+    ports:
+      - "8787:8787"
+    volumes:
+      - ~/Comp/rstudio:/home/rstudio/projects/
+    environment:
+      - USERID=${LOCAL_UID:-1000}
+      - GROUPID=${LOCAL_GID:-1000}
+    restart: unless-stopped
