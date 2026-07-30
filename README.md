@@ -5,7 +5,23 @@
 + L'utilisateur rstudio est sudoer sans mot de passe 
 
 ## Usage
-+ `mkdir -p ~/Comp/rstudio/`
+
+### Côté WSL
+```{bash}
+URL_REPO="git@github.com:pietrodito/WSL-RStudio-server-pak-ready.git"
+DOCKER_DIR="~/Comp/docker/"
+RSTUDIO_USER_FILES="~/Comp/rstudio/"
+
+
+mkdir -p "$DOCKER_DIR" "$RSTUDIO_USER_FILES"
+
+git clone "$URL_REPO" "$DOCKER_DIR/rstudio-server/"
+
+cd "$DOCKER_DIR/rstudio-server/"
+LOCAL_UID=$(id -u) LOCAL_GID=$(id -g) docker compose up -d --build
+```
+
+### Côté Windows
 + [http://localhost:8787/](http://localhost:8787/)
 + user = rstudio
 + pswd = asdf
